@@ -5,14 +5,18 @@
 body{
     font-family: arial,sans-seriff;
     line-height: 25px;
+    background-color: #dcdcdc;
+    ;
+    color: #4f6d7a;
 }
 
 header{
-    font-family: Algerian;
+   /*// font-family: "Comic Sans MS";*/
     font-size: xx-large;
     text-align: center;
-    color: saddlebrown;
+    color: #4f6d7a;
     margin-bottom: 10px;
+    padding: 20px;
 }
 
 p{
@@ -20,15 +24,237 @@ p{
 
 }
 
-.form-address{
-    text-align: center;
+    
+    /*body {*/
+    /*    background-color: var(--primColor);*/
+    /*    font-family: Arial, Helvetica, sans-serif;*/
+    /*    font-size: 20px;*/
+    /*}*/
+    details {
+        margin: 40px;
+        font-size: 20px;
+        
+    }
+    summary {
+        writing-mode: vertical-lr;
+        text-align: center;
+        padding: 12px 10px;
+        width: 23px;
+        height: 17px;
+        background-color: var(--primColor);
+        border: 2px solid var(--secoColor);
+        border-radius: var(--cornerRad);
+        color: var(--secoColor);
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+        transition: transform 200ms ease-in-out 0s;
+    }
+    summary::before,
+    summary::after {
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    summary::before {
+        content: "";
+    }
+    summary::after {
+        content: "III";
+        letter-spacing: -1px;
+    }
+    summary:hover {
+        transform: scale(1.1);
+    }
+    summary::marker {
+        font-size: 0;
+    }
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    details[open] .menu {
+        animation-name: menuAnim;
+    }
+    details[open] summary::before {
+        content: "X";
+    }
+    details[open] summary::after {
+        content: "";
+    }
+    .menu {
+        height: 0;
+        width: fit-content;
+        border-radius: var(--cornerRad);
+        background-color: var(--primColor);
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        animation: closeMenu 300ms ease-in-out forwards;
+    }
+    .menu a {
+        padding: 12px 24px;
+        margin: 0 16px;
+        color: var(--secoColor);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        text-align: center;
+        transition: filter 200ms linear 0s;
+    }
+    .menu a:nth-of-type(1) {
+        padding-top: 24px;
+    }
+    .menu a:nth-last-of-type(1) {
+        border-bottom: none;
+    }
+    .menu a:hover {
+        filter: brightness(200%);
+        color: #000003;
+    }
+    details::before {
+
+        color: var(--secoColor);
+        position: absolute;
+        margin-left: 80px;
+        padding: 10px 10px;
+        opacity: 0.4;
+    }
+    details[open]::before {
+        animation: fadeMe 300ms linear forwards;
+    }
+    @keyframes menuAnim {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 312px;
+        }
+    }
+    @keyframes fadeMe {
+        0% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 0;
+        }
+    } */
+ 
+
+
+/*nav bar css starts here*/
+
+/*nav bar css ends here*/
+/*Submit Button*/
+
+
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: sans-serif;
+   background: #000;
+}
+.btnSubmit{
+    position: relative;
+    left:45%;
+    margin-top: 20px;
+}
+button {
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    position: relative;
+    /* left:50%; */
+    background: transparent;
+    color: #000003;
+    text-transform: uppercase;
+    border: 3px solid #706c66;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px;
+   /* margin-top: 20px; */
+  
 
 }
+
+button:hover {
+    color: #000;
+}
+span {
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+button .first {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: #918878;
+}
+
+button:hover .first {
+    top: 0;
+    right: 0;
+}
+button .second {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -100%;
+    height: 100%;
+    width: 25%;
+    background: #918878;
+}
+
+button:hover .second {
+    top: 0;
+    left: 50%;
+}
+
+button .third {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    top: 100%;
+    width: 25%;
+    background: #918878;
+}
+
+button:hover .third {
+    top: 0;
+    left: 25%;
+}
+
+button .fourth {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background: #918878;
+}
+
+button:hover .fourth {
+    top: 0;
+    left: 0;
+}
+
+
 
 .wrapper{
     width: 90%;
     margin: 0 auto;
     padding: 1% 1%;
+    font-family: cursive;
 }
 .clearfix:after {
    content: " ";
@@ -39,28 +265,58 @@ p{
 }
 /*CSS for Header*/
 .header{
-    background-color: darkblue;
-    color: white;
+    background-color: #293946;
+    color: #f6dfb4;
     text-align: center;
+    font-family: "Comic Sans MS";
 }
 
+.contentone {
+    margin: 0 5%;
+    padding: 30px 60px;
+    font-family: cursive;
+
+}
 /*CSS for MEnu*/
 .menu ul{
     list-style-type: none;
+ 
 }
 .menu ul a{
-    color: darkblue;
+    color: #4f6d7a;
     text-decoration: none;
     padding: 1%;
 }
 .menu ul a:hover{
-    background-color: darkblue;
-    color: white;
+    background-color: #b8b08d;
+    color:#FFFFFF;
+    border-radius: 20px;
+
 }
 .menu ul a li{
     display: inline;
 }
+.menuone ul{
+    list-style-type: none;
+    /* justify-content: space-evenly; */
+    color: #f6dfb4;
+    padding: 10px;
+    text-align: center;
+}
+.menuone ul a{
+    color: #f6dfb4;
+    text-decoration: none;
+    padding: 1%;
+}
+.menuone ul a:hover{
+    background-color: #b8b08d;
+    color:black;
+    border-radius: 20px;
 
+}
+.menuone ul a li{
+    display: inline;
+}
 
 
 /*CSS for Main Body*/
@@ -168,10 +424,73 @@ p{
     border: none;
 }
 
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+ /*Style for the summary element */
+
+ .form{
+    /* background-color: aliceblue; */
+    margin: 0 5%;
+    padding: 30px 60px;
+    
+   
+}
+.row {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+}
+.col {
+    padding: 20px 40px;
+    text-align: left;
+    margin: auto;
+}
+.form-control{
+    width: 100%;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    opacity: 80%;
+
+    background-color: #FBFBFB;
+    
+}
+
+label{
+    display: block;
+    text-align: left;
+}
+
+
+ 
 /*CSS for Footer*/
 .footer{
-    background-color: darkblue;
-    color: white;
+    background-color: #293946;
+    color: #f6dfb4;
 }
 .footer p{
     text-align: center;
