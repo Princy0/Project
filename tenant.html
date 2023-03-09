@@ -59,69 +59,82 @@
             <label>Email ID : </label>
             <input type="email" class="form-control" placeholder="xyz@gmail.com">
         </div>
+        <div class="col">
+            <label>Phone (Cell): </label>
+            <input type="text" class="form-control" placeholder="Phone(Cell)">
+        </div>
+        <div class="col">
+            <label>Phone (Work): </label>
+            <input type="text" class="form-control" placeholder="Phone(Work)">
+        </div>
+        
     </div>
-    <h2>Address</h2>
+    <br>
+    <h2>Tell Us What You're Looking For</h2>
+    <br>
     <!--</form>-->
     <!--<h2>Address</h2>-->
     <!--<form >-->
 
 
     <div class="form-group">
-        <label for="buildingName">Building Name</label>
-        <input type="text" class="form-control" id="buildingName" placeholder="Building Name">
+        <label for="MoveInDate">Move in Date</label>
+        <input type="date" class="form-control" id="moveInDate" >
     </div>
     <div class="form-group">
-        <label for ="UnitNo">Unit Number</label>
-        <input type="text" class="form-control" id="UnitNo" placeholder="Unit no./ Suite no.">
+        <label for="cmbRentalType">Type of Rental</label>
+        <select name="cmbRentalType" id="cmbRentalType" data-native-menu="false" class="select-control">
+            <option>Type Of Rental</option>
+            <option value="APT">Apartment</option>
+            <option value="CD">Condo</option>
+            <option value="BM">Basement</option>
+            <option value="TH">TownHouse</option>
+            <option value="AY">Any</option>
+        </select>
+     
+       
     </div>
     <div class="form-group">
-        <label for="streetAddress">Street Address*</label>
-        <input type="text" class="form-control" id="streetAddress" placeholder="Street Address">
+        <label for="Bedrooms">Bedrooms</label>
+        <input type="text" class="form-control" id="bedRooms" placeholder="Bedrooms">
     </div>
     <div class="form-row">
         <div class="form-group ">
-            <label for="inputCity">City*</label>
-            <input type="text" class="form-control" id="inputCity">
+            <label for="Bathrooms">Bathrooms</label>
+            <input type="text" class="form-control" id="bathrooms" placeholder="Bathrooms">
         </div>
-        <div class="form-group ">
-            <label for="cmbState"> Choose State:</label>
-            <select name="cmbState" class="form-control" id="cmbState" data-native-menu="false" data-iconpos="right">
-            </select>
-        </div>
-        <div class="form-group ">
-            <label for="postalCode">Postal Code</label>
-            <input type="text" class="form-control" id="postalCode">
-        </div>
-    </div>
+       <div class="
+       form-group">
+       <label for="TermOfTenancy">Term Of Tenancy</label>
+       <select name="termOfTenancy" id="termOfTenancy" data-native-menu="false" class="select-control">
+        <option>Term of Tenancy</option>
+        <option value="Mth">3-6 Month</option>
+        <option value="year">1 Year</option>
+        <option value="other"> Other </option>
+        
+    </select>
 
-    <h1>
-        Unit
-    </h1>
-    <div class="form-group">
-        <label for="price">Price (Monthly Rent)</label>
-        <input type="text" class="form-control"  id="price" placeholder="Price(Monthly Rent)">
-    </div>
-    <div class="form-group">
-        <label for ="squareFootage">Square Footage</label>
-        <input type="text" class="form-control" id="squareFootage" placeholder="Square Footage">
-    </div>
-    <div class="form-group">
-        <label for="bedRooms">Bedrooms</label>
-        <input type="text" class="form-control" id="bedRooms" placeholder="Street Address">
-    </div>
-    <div class="form-row">
+       </div>
         <div class="form-group ">
-            <label for="bathrooms">Bathrooms</label>
-            <input type="text" class="form-control" id="bathrooms">
-        </div>
-        <div class="form-group ">
-            <label for="parking">Parking</label>
-            <input type="text" class="form-control" id="parking">
+            <label for="rentPriceRange">Rent Price Range</label>
+            <input type="text" class="form-control" id="rentPriceRange" placeholder="Rent Price range">
         </div>
         <div class="form-group ">
             <label for="petFriendly">Pet Friendly</label>
-            <input type="text" class="form-control" id="petFriendly">
+            <input type="text" class="form-control" id="petFriendly" placeholder="Pet Friendly">
         </div>
+    </div>
+    <br>
+    <h1>
+       Other Features You're Looking for 
+    </h1>
+    
+        <label for="Comments" class="form-group">Comments</label>
+        <textarea class="form-control"  id="comments" placeholder="Comments" rows="2" cols="50">
+        </textarea>
+       
+    
+    
     </div>
     <br>
     <!--    <button type="submit" class="btnSubmit">Submit</button>-->

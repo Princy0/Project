@@ -461,11 +461,12 @@ button:hover .fourth {
 }
 .row {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    margin-left: -200px;
     
 }
 .col {
-    padding: 20px 40px;
+    padding: 10px 40px;
     text-align: left;
     margin: auto;
 }
@@ -479,10 +480,20 @@ button:hover .fourth {
     background-color: #FBFBFB;
     
 }
+.select-control{
+    width: 100%;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    opacity: 80%;
+   
+    background-color: #FBFBFB;
+}
 
 label{
     display: block;
     text-align: left;
+    padding: 10px;
 }
 
 
