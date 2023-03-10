@@ -24,7 +24,13 @@ p{
 
 }
 
-    
+    .center{
+        text-align: center;
+    }
+    label .error{
+        color: red;
+        font-weight: bold;
+    }
     /*body {*/
     /*    background-color: var(--primColor);*/
     /*    font-family: Arial, Helvetica, sans-serif;*/

@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Landlords</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/js/lib/jquery-2.1.4.js"></script>
+    <script src="assets/js/lib/jquery.validate.js"></script>
+<!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
     <link rel="stylesheet" href="assets/css/lib/jquery.mobile-1.4.5.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/DAL.js"></script>
+    <script src="assets/js/eventclass.js"></script>
+    <script src="assets/js/facade.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/global.js"></script>
+    </head>
 <body>
+<div id="landLordPage" data-role="page">
 <header class="header">
     <div class="wrapper">
         <h1>RentGuide</h1>
@@ -47,21 +58,21 @@
 <p class="contentone">RentGuide will accept offer of renting their houses. As per our expertise of Selling and Renting we will make sure your home is all good to sell or rent.
 Just need to fillup this Form and Owners and Lanlords are Welcomed to join our RentGuide Family.</p>
 
-<form class="form">
+<form class="form" id="frmLandlord">
     <h2>Contact Info</h2>
 
     <div class="row">
         <div class="col">
             <label>First Name : </label>
-            <input type="text" class="form-control" placeholder="First name">
+            <input type="text"  id="txtFirstName" class="form-control" placeholder="First name">
         </div>
         <div class="col">
             <label>Last Name : </label>
-            <input type="text" class="form-control" placeholder="Last name">
+            <input type="text" id="txtLastName" class="form-control" placeholder="Last name">
         </div>
         <div class="col">
             <label>Email ID : </label>
-            <input type="email" class="form-control" placeholder="xyz@gmail.com">
+            <input type="email"  id="txtEmailId" class="form-control" placeholder="xyz@gmail.com">
         </div>
     </div>
     <h2>Address</h2>
@@ -76,7 +87,7 @@ Just need to fillup this Form and Owners and Lanlords are Welcomed to join our R
     </div>
         <div class="form-group">
             <label for ="UnitNo">Unit Number</label>
-            <input type="text" class="form-control" id="UnitNo" placeholder="Unit no./ Suite no.">
+            <input type="number" class="form-control" id="UnitNo" placeholder="Unit no./ Suite no.">
         </div>
     <div class="form-group">
         <label for="streetAddress">Street Address*</label>
@@ -85,7 +96,7 @@ Just need to fillup this Form and Owners and Lanlords are Welcomed to join our R
     <div class="form-row">
         <div class="form-group ">
             <label for="inputCity">City*</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control" id="inputCity" placeholder="City">
         </div>
         <div class="form-group ">
             <label for="cmbState"> Choose State:</label>
@@ -94,41 +105,41 @@ Just need to fillup this Form and Owners and Lanlords are Welcomed to join our R
         </div>
         <div class="form-group ">
             <label for="postalCode">Postal Code</label>
-            <input type="text" class="form-control" id="postalCode">
+            <input type="text" class="form-control" id="postalCode" placeholder="Postal Code">
         </div>
     </div>
-
+<br>
 <h1>
     Unit
 </h1>
     <div class="form-group">
         <label for="price">Price (Monthly Rent)</label>
-        <input type="text" class="form-control" id="price" placeholder="Price(Monthly Rent)">
+        <input type="number" class="form-control" id="price" placeholder="Price(Monthly Rent)">
     </div>
     <div class="form-group">
         <label for ="squareFootage">Square Footage</label>
-        <input type="text" class="form-control" id="squareFootage" placeholder="Square Footage">
+        <input type="number" class="form-control" id="squareFootage" placeholder="Square Footage">
     </div>
     <div class="form-group">
         <label for="bedRooms">Bedrooms</label>
-        <input type="text" class="form-control" id="bedRooms" placeholder="Street Address">
+        <input type="number" class="form-control" id="bedRooms" placeholder="Bedrooms">
     </div>
     <div class="form-row">
         <div class="form-group ">
             <label for="bathrooms">Bathrooms</label>
-            <input type="text" class="form-control" id="bathrooms">
+            <input type="number" class="form-control" id="bathrooms" placeholder="Bathrooms">
         </div>
         <div class="form-group ">
             <label for="parking">Parking</label>
-            <input type="text" class="form-control" id="parking">
+            <input type="text" class="form-control" id="parking" placeholder="Parking">
         </div>
         <div class="form-group ">
             <label for="petFriendly">Pet Friendly</label>
-            <input type="text" class="form-control" id="petFriendly">
+            <input type="text" class="form-control" id="petFriendly" placeholder="Pet Friendly">
         </div>
     </div>
     <br>
-    <button class="btnSubmit">
+    <button class="btnSubmit" id="btnSubmits" name="btnSubmits">
         Submit
         <span class="first"></span>
         <span class="second"></span>
@@ -143,7 +154,7 @@ Just need to fillup this Form and Owners and Lanlords are Welcomed to join our R
 
 <br>
 
-</body>
+
 <footer class="footer">
     <nav class="menuone">
         <div class="wrapper">
@@ -163,4 +174,6 @@ Just need to fillup this Form and Owners and Lanlords are Welcomed to join our R
         <p>&copy; <a href="#">RentGuide</a>. All rights reserved 2023.</p>
     </div>
 </footer>
+</div>
+</body>
 </html>
